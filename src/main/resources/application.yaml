@@ -1,0 +1,10 @@
+ecfg:
+  limit: 1000
+  url : http://ergast.com/api/f1
+
+
+server:
+  servlet:
+    context-path: /ergast
+
+
