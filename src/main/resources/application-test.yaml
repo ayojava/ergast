@@ -1,0 +1,10 @@
+ecfg:
+  limit: 1000
+  url : http://localhost:7070/api/f1
+
+
+server:
+  servlet:
+    context-path: /ergast
+
+
