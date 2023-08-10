@@ -40,7 +40,7 @@ public class AuthenticationFilter extends GenericFilterBean {
             filterChain.doFilter(httpServletRequest,httpServletResponse);
         } catch (Exception ex){
             log.error(" Exception => " +ex.getMessage());
-            ErrorResponse errorResponse = new ErrorResponse("Error Occurred during authentication", String.valueOf(HttpServletResponse.SC_UNAUTHORIZED));
+            ErrorResponse errorResponse = new ErrorResponse( String.valueOf(HttpServletResponse.SC_UNAUTHORIZED) + "  Error Occurred during authentication", "Failed");
             httpServletResponse.addHeader("Content-Type", "application/json");
             httpServletResponse.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
             PrintWriter printWriter = httpServletResponse.getWriter();

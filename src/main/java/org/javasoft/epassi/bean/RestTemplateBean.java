@@ -45,7 +45,7 @@ public class RestTemplateBean {
                 .build()
                 .toUriString();
 
-        System.out.println("Response String :::::: " + uriString);
+
 
         HttpHeaders headers = new HttpHeaders();
         headers.set("Accept", "application/json");
@@ -53,7 +53,6 @@ public class RestTemplateBean {
         try {
             HttpEntity<String> responseEntity = restTemplate.exchange(uriString, HttpMethod.GET, new HttpEntity<>(headers), String.class);
             response = responseEntity.getBody();
-
             if (String.class.equals(responseType)) {
                 return (T) response;
             }
