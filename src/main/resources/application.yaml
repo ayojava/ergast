@@ -6,5 +6,5 @@ ecfg:
 server:
   servlet:
     context-path: /ergast
-
+  address: 0.0.0.0
 
